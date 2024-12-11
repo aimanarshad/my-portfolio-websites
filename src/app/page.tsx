@@ -1,5 +1,5 @@
 "use client"; // This directive must be the first line in the file
-
+import Image from 'next/image'
 import { useEffect, useState } from "react";
 
 type SkillBarProps = {
@@ -10,38 +10,7 @@ type SkillBarProps = {
 function SkillBar({ skill, percentage }: SkillBarProps) {
   const [width, setWidth] = useState<number>(0);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
-  const visibleProjects = [
-    {
-      title: "dynamic Route",
-      description: "Created  using nextjs and its is usinf dynamic routes to moving from one page to another.",
-    },
-    {
-      title: "Resume",
-      description: "Created  using nextjs and html and css design from figma-to-html and it is resume builder website",
-    },
-    {
-      title: "Tic Tac toe Game",
-      description: "Created  using nextjs and html and css",
-    },
-    {
-      title: "Simple Calculator",
-      description: "Created  using nextjs and html and css it is having all basic functions used in calculator.",
-    },
-
-    {
-      title: "Project 5",
-      description: "This is a description of Project 3.",
-    },
-    {
-      title: "Project 6",
-      description: "This is a description of Project 3.",
-    },
-    {
-      title: "Project 7",
-      description: "This is a description of Project 3.",
-    },
-    
-  ];
+  
   
 
   useEffect(() => {
@@ -172,9 +141,11 @@ export default function HomePage() {
             Software Eng | Full-stack developer
           </p>
         </div>
-        <img
+        <Image
           src="/p.jpeg" // Replace with profile image path
           alt="Profile"
+          width={80}
+          height={80}
           className=" w-80 h-80 rounded-full mt-6 border-4 border-pink-500 transition-transform duration-300 transform hover:scale-110"
         />
       </section>
@@ -187,15 +158,15 @@ export default function HomePage() {
         <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-2xl text-center hover:bg-red-300 text-white transition duration-300">
           <h2 className="text-4xl font-bold text-pink-800 ">About Me</h2>
           <p className="mt-4 text-pink-700 ">
-            I'm a software engineering student and full-stack developer skilled
+            I m a software engineering student and full-stack developer skilled
             <br />
-            in Python, Java, and C++. I’m passionate about building responsive,
+            in Python, Java, and C++. I m passionate about building responsive,
             <br />
             efficient applications and continually expanding my technical
             <br />
             knowledge. My portfolio reflects my commitment to coding and
             <br />
-            problem-solving—let's create something impactful together!
+            problem-solving—let s create something impactful together
             <br />
           </p>
           <button className="mt-6 px-4 py-2 text-2xl bg-pink-600 text-white rounded hover:bg-pink-700 transition duration-300">
